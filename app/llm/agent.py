@@ -1,4 +1,5 @@
-from typing import List, Optional
+from enum import Enum
+from typing import List, Literal, Optional, Union
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import (
     ChatPromptTemplate,
@@ -18,22 +19,30 @@ from llm.tools.retriever import retriever_tool
 class Bar(BaseModel):
     bar_name: str = Field(description="Name of the bar")
     heigth: int = Field(description="Heigth of the bar. This would be the number of votes")
+    color: str = Field(description="color of the bar in hash code")
 
 class Graph(BaseModel):
+    type: Literal["graph"] = "graph"
     x_label: str = Field(description="The X-axis name of the graph")
     y_label: str = Field(description="The Y-axis name of the graph")
     bars: List[Bar]
 
+class Image(BaseModel):
+    type: Literal["image"] = "image"
+    url: str = Field(description="URL of the image")
+    caption: str = Field(description="caption of the image")
 
-class Answer(BaseModel):
+
+class Response(BaseModel):
     answer: str = Field(description="Helpful answer")
-    graph: Optional[Graph] = Field(description="Helpful bar-graph only if applicable/possible, otherwise leave it as default value", default=None)
+    resource: Union[Graph, Image, None] = Field(description="Helpful bar-graph only if applicable/possible, otherwise leave it as None")
 
 
-parser = JsonOutputParser(pydantic_object=Answer)
+parser = JsonOutputParser(pydantic_object=Response)
 
 tools = [retriever_tool, get_district_result]
-llm = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0)
+# llm = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0)
+llm = ChatOpenAI(model="gpt-4o-2024-11-20", temperature=0)
 
 prompt = ChatPromptTemplate.from_messages([
     SystemMessagePromptTemplate(prompt=PromptTemplate(template="You are a helpful assistant for election commission of Sri Lanka.")),

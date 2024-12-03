@@ -1,0 +1,41 @@
+[
+    {
+        "district": "Colombo",
+        "year": "2019",
+        "valid_votes": 811763,
+        "rejected_votes": 6847,
+        "total_polled": 818610,
+        "candidate_results": [
+           {"candidate_name": "Gotabaya Rajapaksa", "Votes_Received": 727713, "color": "#bd0006"},
+           {"candidate_name": "Sajith Premadasa", "Votes_Received": 559921, "color": "#007533"},
+           {"candidate_name": "Anura Kumara Dissanayaka", "Votes_Received": 53803, "color": "#8c0154"},
+           {"candidate_name": "Mahesh Senanayake", "Votes_Received": 10335, "color": "#83c341"}
+        ]
+    },
+    {
+        "district": "Kalutara",
+        "year": "2019",
+        "valid_votes": 1369177,
+        "rejected_votes": 15333,
+        "total_polled": 1383510,
+        "candidate_results": [
+           {"candidate_name": "Gotabaya Rajapaksa", "Votes_Received": 482920, "color": "#bd0006"},
+           {"candidate_name": "Sajith Premadasa", "Votes_Received": 284213, "color": "#007533"},
+           {"candidate_name": "Anura Kumara Dissanayaka", "Votes_Received": 27681, "color": "#8c0154"},
+           {"candidate_name": "Mahesh Senanayake", "Votes_Received": 3213, "color": "#83c341"}
+        ]
+    },
+    {
+        "district": "Jaffna",
+        "year": "2019",
+        "valid_votes": 372913,
+        "rejected_votes": 11251,
+        "total_polled": 384164,
+        "candidate_results": [
+            {"candidate_name": "Sajith Premadasa", "Votes_Received": 312722, "color": "#007533"},
+           {"candidate_name": "Gotabaya Rajapaksa", "Votes_Received": 23261, "color": "#bd0006"},
+           {"candidate_name": "M. K. Shivajilingam", "Votes_Received": 6845, "color": "#d5d5d5"},
+           {"candidate_name": "Ariyawansha Dissanayake", "Votes_Received": 6790, "color": "#d5d5d5"}
+        ]
+    }
+]

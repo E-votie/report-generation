@@ -1,0 +1,40 @@
+[
+    {
+        "district": "Colombo",
+        "year": "2024",
+        "valid_votes": 1334390,
+        "rejected_votes": 31796,
+        "total_polled": 1366186,
+        "candidate_results": [
+           {"candidate_name": "Anura Kumara Dissanayaka", "Votes_Received": 626963, "color": "#f60824"},
+           {"candidate_name": "Sajith Premadasa", "Votes_Received": 342108, "color": "#fada5e"},
+           {"candidate_name": "Ranil Wickremesinghe", "Votes_Received": 281436, "color": "#4b7b13"},
+           {"candidate_name": "Namal Rajapaksha", "Votes_Received": 30432, "color": "#b41f24"}
+        ]
+    },
+    {
+        "district": "Kalutara",
+        "year": "2024",
+        "valid_votes": 817518,
+        "rejected_votes": 16243,
+        "total_polled": 833761,
+        "candidate_results": [
+           {"candidate_name": "Anura Kumara Dissanayaka", "Votes_Received": 387764, "color": "#f60824"},
+           {"candidate_name": "Sajith Premadasa", "Votes_Received": 236307, "color": "#fada5e"},
+           {"candidate_name": "Ranil Wickremesinghe", "Votes_Received": 143285, "color": "#4b7b13"},
+           {"candidate_name": "Namal Rajapaksha", "Votes_Received": 22727, "color": "#b41f24"}
+        ]
+    },{
+        "district": "Jaffna",
+        "year": "2024",
+        "valid_votes": 371688,
+        "rejected_votes": 25353,
+        "total_polled": 397041,
+        "candidate_results": [
+            {"candidate_name": "Sajith Premadasa", "Votes_Received": 121177, "color": "#fada5e"},
+            {"candidate_name": "Ariyanethiran Pakkiyaselvam", "Votes_Received": 116688, "color": "#d649c0"},
+            {"candidate_name": "Ranil Wickremesinghe", "Votes_Received": 84558, "color": "#4b7b13"},
+            {"candidate_name": "Anura Kumara Dissanayaka", "Votes_Received": 27086, "color": "#f60824"}
+        ]
+    }
+]
