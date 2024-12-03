@@ -15,6 +15,9 @@ from langchain.agents import create_tool_calling_agent
 from langchain.agents import AgentExecutor
 from llm.tools.presidential_election import get_district_result
 from llm.tools.retriever import retriever_tool
+from config import get_settings
+
+settings = get_settings()
 
 class Bar(BaseModel):
     bar_name: str = Field(description="Name of the bar")
@@ -23,6 +26,7 @@ class Bar(BaseModel):
 
 class Graph(BaseModel):
     type: Literal["graph"] = "graph"
+    title: str = Field(description="The title of the graph")
     x_label: str = Field(description="The X-axis name of the graph")
     y_label: str = Field(description="The Y-axis name of the graph")
     bars: List[Bar]
@@ -42,7 +46,7 @@ parser = JsonOutputParser(pydantic_object=Response)
 
 tools = [retriever_tool, get_district_result]
 # llm = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0)
-llm = ChatOpenAI(model="gpt-4o-2024-11-20", temperature=0)
+llm = ChatOpenAI(model="gpt-4o-2024-11-20", temperature=0, api_key=settings.openai_api_key)
 
 prompt = ChatPromptTemplate.from_messages([
     SystemMessagePromptTemplate(prompt=PromptTemplate(template="You are a helpful assistant for election commission of Sri Lanka.")),
